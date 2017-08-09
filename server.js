@@ -9,9 +9,7 @@ var articalOne={
   heading:'Artical one ',
   date:'8 aug 2017',
   content:` <p>
-                This is mint first web page am so happy to see it. This is mint first web page am so happy to see it.
-                This is mint first web page am so happy to see it.This is mint first web page am so happy to see it
-                This is mint first web page am so happy to see it
+                Thy to see it
                 
                 </p>
                 <p>

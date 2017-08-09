@@ -4,64 +4,6 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var articalOne={
-  title:'Artical one sonu pandit',
-  heading:'Artical one ',
-  date:'8 aug 2017',
-  content:` <p>
-                Thy to see it
-                
-                </p>
-                <p>
-                    This is mint first web page am so happy to see it.
-                      62.231.244.121
-1
-   Ipv4 is expensive
-                </p>`
-  
-};
-function template(data){
-    var title= data.title;
-    var heading= data.heading;
-var htmltemplate=`
-<html>
-    <head>
-        <title>
-            ${title}
-        </title>
-        <style>
-        
-            font-family=sen serif;
-        }
-            
-        </style>
-        </head>
-        <body>
-            <div class="container">
-                <div>
-                <a href="/">Home</a>
-            </div>
-            <h3>
-                Artical one
-                
-            </h3>
-            <div>
-               ${heading}
-            </div>
-            <div>
-               
-           </div> </div>
-            <hr/>
-        </body>
-    
-</html>
-
-`;
-return  htmltemplate;
-}
-
-
-
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));

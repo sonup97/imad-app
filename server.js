@@ -5,8 +5,9 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articalOne={
-    title:'Artical one sonu pandit',
+var artical={
+articalOne={
+     title:'Artical one sonu pandit',
     heading:'Artical one',
     date:'5 sept 2017',
     content:`<p>
@@ -15,8 +16,27 @@ var articalOne={
                 <p>
                 This is the content for mine firsr partical This is the content for mine firsr partica0This is the content for mine firsr partical
                 </p>`
+}
+articalTwo:{
+     title:'Artical Two sonu pandit',
+    heading:'Artical two',
+    date:'5 sept 2017',
+    content:`<p>
+                This is the content for mine second t for mine firsr partical
+                </p>
+                
+
+}
+articalThree:{ title:'Artical three sonu pandit',
+    heading:'Artical three',
+    date:'5 sept 2017',
+    content:`
+                <p>
+                This is the content for mine firsr partical This is the content for mine firsr partica0This is the content for mine firsr partical
+               ` </p>
     
-    
+};
+   
 };
  function creatTemplate(data){
      

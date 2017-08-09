@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var artical={
-articalOne={
+'artical-one':{
      title:'Artical one sonu pandit',
     heading:'Artical one',
     date:'5 sept 2017',
@@ -16,24 +16,21 @@ articalOne={
                 <p>
                 This is the content for mine firsr partical This is the content for mine firsr partica0This is the content for mine firsr partical
                 </p>`
-}
-articalTwo:{
+},
+'artical-two':{
      title:'Artical Two sonu pandit',
     heading:'Artical two',
     date:'5 sept 2017',
     content:`<p>
                 This is the content for mine second t for mine firsr partical
-                </p>
-                
-
-}
-articalThree:{ title:'Artical three sonu pandit',
+                </p>`
+},
+'articalthree':{ title:'Artical three sonu pandit',
     heading:'Artical three',
     date:'5 sept 2017',
-    content:`
-                <p>
+    content:`<p>
                 This is the content for mine firsr partical This is the content for mine firsr partica0This is the content for mine firsr partical
-               ` </p>
+               </p>`
     
 };
    
@@ -83,8 +80,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/artical-one', function(req, res){
-   res.send(creatTemplate(articalOne));
+app.get('/:articalName', function(req, res){
+    var articalName=req.parans.articalName;
+    
+   res.send(creatTemplate(articales[articalName]));
 });
 
 app.get('/artical-two', function(req, res){

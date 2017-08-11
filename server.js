@@ -17,14 +17,7 @@ var artical={
                 This is the content for mine firsr partical This is the content for mine firsr partica0This is the content for mine firsr partical
                 </p>`
 },
-'artical-two':{
-     title:'Artical Two sonu pandit',
-    heading:'Artical two',
-    date:'5 sept 2017',
-    content:`<p>
-                This is the content for mine second t for mine firsr partical
-                </p>`
-},
+
 'articalthree':{ title:'Artical three sonu pandit',
     heading:'Artical three',
     date:'5 sept 2017',
@@ -87,7 +80,7 @@ app.get('/:articalName', function(req, res){
 });
 
 app.get('/artical-two', function(req, res){
-    res.sendFile(path.join(__dirname, 'ui', 'artical-two.html'));
+    res.send('Here is mine first artical.');
 });
 app.get('/artical-three', function(req, res){
     res.sendFile(path.join(__dirname, 'ui', 'artical-three.html'));

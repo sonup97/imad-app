@@ -10,12 +10,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articalName', function(req, res){
+//app.get('/:articalName', function(req, res){
     var articalName=req.parans.articalName;
     
-   res.send(creatTemplate(articales[articalName]));
-});
-
+   
 app.get('/artical-two', function(req, res){
     res.send('Here is mine first artical.');
 });
